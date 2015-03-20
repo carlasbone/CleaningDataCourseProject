@@ -94,4 +94,7 @@ library(dplyr)
 testgroup <- group_by(mysubset,subject,activity)
 datameanstd<-summarise_each(testgroup,funs(mean))
 
+# write out contents of data frame datameanstd to file datameanstd.txt
+write.table(datameanstd,"datameanstd.txt", row.name=FALSE)
+
 
